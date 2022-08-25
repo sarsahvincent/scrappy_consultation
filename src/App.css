@@ -17,7 +17,7 @@ p {
 .navbar-containr {
   padding-top: 5px;
   width: 100%;
-  background-color: rgba(33, 3, 80, 0.753);
+  background-color: rgba(109, 44, 7, 0.726);
   height: 60px;
   display: flex;
   align-items: center;
@@ -53,7 +53,7 @@ p {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  background-image: url("./assets/images/aboutus.jpg");
+  background-image: url("./assets/images/hero1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -64,7 +64,7 @@ p {
 .hero_text h1 {
   color: white;
   font-weight: 700;
-  font-size: 70px;
+  font-size: 55px;
   text-align: center;
   text-shadow: 2px 2px rgb(3, 3, 58);
   margin-bottom: 50px;
@@ -79,10 +79,6 @@ p {
   text-shadow: 2px 1px rgb(0, 0, 0);
   max-width: 800px;
   margin: 0 auto;
-}
-
-.hero_sub_text span {
-  color: rgb(216, 88, 14);
 }
 
 /* HOME PAGE */
@@ -109,7 +105,7 @@ p {
 }
 
 .home_services_list ul li {
-  list-style: square;
+  list-style: disc;
   color: rgb(216, 88, 14);
   font-size: 24px;
   font-weight: 700;
@@ -131,7 +127,7 @@ p {
 }
 
 .about_us p {
-  font-size: 24px;
+  font-size: 20px;
 }
 /* MEDIA QUERIES */
 
@@ -144,6 +140,7 @@ p {
   .navbar-containr {
     height: 50px;
   }
+
   .nav_link p {
     font-size: 18px;
     font-weight: 400;
@@ -156,13 +153,19 @@ p {
 
   .hero_text h1 {
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 20px;
   }
 
   .hero_sub_text {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .home_services_list ul li {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
   }
 
   .home_services,

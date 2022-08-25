@@ -1,7 +1,7 @@
 import React from "react";
 import { HashScroll } from "react-hash-scroll";
 
-import HomePic from "../assets/images/paul.jpeg";
+import HomePic from "../assets/images/contact.jpg";
 
 export default function ContactUsPage() {
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 import { HashScroll } from "react-hash-scroll";
 
-import HomePic from "../assets/images/Ghana_Biometric_Passport.jpg";
+import HomePic from "../assets/images/paul.jpeg";
 
 export default function AboutUsPage() {
   return (
@@ -11,15 +11,13 @@ export default function AboutUsPage() {
         <div className="home_about">
           <div className="about_us">
             <p>
-              <b>Scrappy Consult</b> offers assistant to out client acquire Passport,
-              Birth Certificate, Business Registration and Tax Identification
-              Number (TIN) Registration. ScrappyConsult makes the process of
-              acquiring these documents easy.
-              <br />
+              <b>Scrappy Consult</b> offers assistant to our clients to acquire
+              Passport, Birth Certificate, Business Registration and Tax
+              Identification Number (TIN). Scrappy Consult makes the
+              process of acquiring these documents easy.
               <br />
               Our Team of professionals will guide you through the process of
               registration, by making sure the right information is provided.
-              <br />
               <br />
               For the past three years, our clients have trusted use as the best
               <b> Passport</b>, <b> Business</b>,<b> Birth Certificate</b> and
