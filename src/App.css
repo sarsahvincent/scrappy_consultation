@@ -17,7 +17,7 @@ p {
 .navbar-containr {
   padding-top: 5px;
   width: 100%;
-  background-color: rgba(80, 31, 3, 0.979);
+  background-color: rgba(33, 3, 80, 0.753);
   height: 60px;
   display: flex;
   align-items: center;
@@ -93,13 +93,15 @@ p {
   margin-bottom: 50px;
 }
 
-.home_services {
+.home_services,
+.home_about {
   width: 100%;
   display: flex;
   align-items: flex-start;
 }
 
-.home_services p {
+.home_services p,
+.home_about p {
   color: rgb(221, 87, 9);
 }
 .home_services_image {
@@ -114,7 +116,7 @@ p {
   margin-bottom: 20px;
 }
 
-.contact_list ul li  {
+.contact_list ul li {
   list-style: none;
   color: rgb(216, 88, 14);
   font-size: 24px;
@@ -125,7 +127,7 @@ p {
 .about_us {
   padding: 10px;
   border-radius: 6px;
-  text-align: justify;
+  text-align: left;
 }
 
 .about_us p {
@@ -136,6 +138,10 @@ p {
 /* Extra small devices (portrait phones, less than 576px) */
 
 @media (max-width: 575.98px) {
+
+  .nav_link {
+    margin: 0 10px 0 5px;
+  }
   .navbar-containr {
     height: 50px;
   }
@@ -159,6 +165,41 @@ p {
     font-weight: 600;
     font-size: 20px;
   }
+
+  .home_services,
+  .home_about {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .home_about {
+    flex-direction: column-reverse;
+  }
+
+  .home_services_image img,
+  .home_about img {
+    width: 100%;
+  }
+
+  .home_services_image,
+  .home_about_image {
+    margin-right: 0;
+    margin-top: -30px;
+  }
+
+  .home_about_image img {
+    margin-left: 0 !important;
+  }
+
+  .contact_list ul li {
+    font-size: 18px;
+  }
+
+  .contact_list {
+    margin-top: 20px;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -166,6 +207,34 @@ p {
 @media (min-width: 576px) and (max-width: 768.98px) {
   .hero_container {
     height: 450px;
+  }
+
+  .home_services {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .home_services_image img {
+    width: 100%;
+  }
+
+  .home_services_image {
+    margin-right: 0;
+    margin-top: -30px;
+  }
+
+  .about_us {
+    padding-top: 0;
+  }
+
+  .home_about_image {
+    margin-top: 12px;
+  }
+
+  .home_about {
+    margin-top: -10px;
   }
 }
 
@@ -191,5 +260,17 @@ p {
 @media (width: 1024px) {
   .hero_container {
     height: 550px;
+  }
+
+  .about_us {
+    padding-top: 0;
+  }
+
+  .home_about_image {
+    margin-top: 12px;
+  }
+
+  .home_about {
+    margin-top: -10px;
   }
 }

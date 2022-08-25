@@ -7,7 +7,7 @@ function Hero() {
       <div className="hero_container">
         <div className="hero_text">
           <div>
-            <h1>Welcome to ScrappyConsult</h1>
+            <h1>Welcome to Scrappy Consult</h1>
           </div>
 
           <h2 className="hero_sub_text">

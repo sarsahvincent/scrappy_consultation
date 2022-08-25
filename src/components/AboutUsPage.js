@@ -8,10 +8,10 @@ export default function AboutUsPage() {
     <HashScroll hash="#about">
       <div className="container my-4 d-flex flex-column">
         <h1 className="home_header">About Us</h1>
-        <div className="home_services">
+        <div className="home_about">
           <div className="about_us">
             <p>
-              <b>ScrappyConsult</b> offers assistant to out client acquire Passport,
+              <b>Scrappy Consult</b> offers assistant to out client acquire Passport,
               Birth Certificate, Business Registration and Tax Identification
               Number (TIN) Registration. ScrappyConsult makes the process of
               acquiring these documents easy.
@@ -26,7 +26,7 @@ export default function AboutUsPage() {
               <b> TIN</b> registration consultant in Ghana.
             </p>
           </div>
-          <div className="home_services_image">
+          <div className="home_about_image">
             <img
               src={HomePic}
               style={{ borderRadius: 6, marginLeft: 30 }}
