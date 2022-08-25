@@ -11,9 +11,8 @@ function Hero() {
           </div>
 
           <h2 className="hero_sub_text">
-            Your Instant <span>Passport</span> ,
-            <span>Birth Certificate & Business Registration </span>
-            Center.
+            Your Instant Passport , Birth Certificate, Business Registration, &
+            Tax Identification Number (TIN) Registration Consultant Center.
           </h2>
         </div>
       </div>
