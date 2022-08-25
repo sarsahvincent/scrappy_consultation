@@ -40,6 +40,9 @@ p {
   font-weight: 600;
 }
 
+.home_about_ipad {
+  display: none;
+}
 .nav_link p:hover {
   color: rgb(241, 245, 8);
   transform: scale(1.1);
@@ -202,6 +205,15 @@ p {
   .contact_list {
     margin-top: 20px;
   }
+
+  .about_us {
+    padding-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .home_about_image {
+    width: 100%;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -229,6 +241,7 @@ p {
 
   .about_us {
     padding-top: 0;
+    margin-bottom: 10px;
   }
 
   .home_about_image {
@@ -265,6 +278,15 @@ p {
 
   .home_about {
     margin-top: -10px;
+    display: none;
+  }
+
+  .home_about_ipad{
+    display: block;
+  }
+  .home_about_ipad p{
+    color: rgb(216, 88, 14);
+    margin-top: 10px;
   }
 }
 
