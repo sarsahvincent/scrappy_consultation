@@ -56,7 +56,7 @@ p {
   justify-content: center;
   flex-direction: column;
   margin: 0 auto;
-  background-image: url("./assets/images/hero1.jpg");
+  background-image: url('./assets/images/hero1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -131,6 +131,84 @@ p {
 
 .about_us p {
   font-size: 20px;
+}
+
+/* Comments */
+
+.comment_list {
+  flex: 1;
+}
+
+.home_comment {
+  flex: 0.5;
+  margin-right: 10px;
+  width: 100%;
+}
+.home_comment form {
+  display: flex;
+  flex-direction: column;
+}
+
+.home_comment form label {
+  margin-bottom: 10px;
+  color: rgb(216, 88, 14);
+  font-weight: 600;
+}
+
+.home_comment form input {
+  margin-bottom: 10px;
+  height: 50px;
+  padding: 5px;
+  border: 1px solid rgb(216, 88, 14);
+  border-radius: 6px;
+  color: rgb(216, 88, 14);
+}
+.comment_button{
+  border-radius: 6px;
+  background-color: rgb(216, 88, 14);
+  color: white;
+  border: none;
+  height: 40px;
+  width: 300px;
+  margin: 0 auto;
+}
+.comment_button_loading{
+  border-radius: 6px;
+  background-color: none;
+  color: white;
+  border: none;
+  height: 40px;
+  width: 300px;
+  margin: 0 auto;
+}
+.home_comment form textarea {
+  padding: 5px;
+  border: 1px solid rgb(216, 88, 14);
+  border-radius: 6px;
+  color: rgb(216, 88, 14);
+  margin-bottom: 10px;
+}
+
+.home_comment form input:focus {
+  border: 1px solid rgb(216, 88, 14);
+}
+.customer_name {
+  color: rgb(216, 88, 14);
+  font-weight: 600;
+}
+.customer_comment {
+  color: rgb(216, 88, 14);
+}
+.comment_list {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.comment_form {
+  height: 400px;
+}
+
+.comment_time {
+  color: gray;
 }
 /* MEDIA QUERIES */
 
@@ -257,11 +335,11 @@ p {
     display: none;
   }
 
-  .home_about_ipad{
+  .home_about_ipad {
     display: block;
   }
 
-  .home_about_ipad p{
+  .home_about_ipad p {
     color: rgb(216, 88, 14);
     margin-top: 10px;
   }
@@ -295,10 +373,10 @@ p {
     display: none;
   }
 
-  .home_about_ipad{
+  .home_about_ipad {
     display: block;
   }
-  .home_about_ipad p{
+  .home_about_ipad p {
     color: rgb(216, 88, 14);
     margin-top: 10px;
   }

@@ -25,6 +25,11 @@ export default function Navbar() {
             <p>Contact Us</p>
           </Link>
         </div>
+        <div className="nav_link">
+          <Link to="/#comment">
+            <p>Comt</p>
+          </Link>
+        </div>
       </nav>
     </div>
   );
