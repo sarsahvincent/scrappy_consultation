@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { HashScroll } from 'react-hash-scroll';
 import Comment from './Comment';
 import Spinner from 'react-bootstrap/Spinner';
-import { auth, db } from '../firebse';
+import { db } from '../firebse';
 import { ToastContainer, toast } from 'react-toastify';
-import { setDoc, doc, getDocs, collection,  Timestamp, orderBy, } from 'firebase/firestore';
+import { setDoc, doc, getDocs, collection } from 'firebase/firestore';
 
 const commentCollectiion = collection(db, 'SCRAPPY_CONSULT');
 
@@ -18,13 +18,19 @@ export default function CommentPage() {
   const [comment, setComment] = useState('');
   const [error, setError] = useState(false);
 
-  console.log('comments', comments);
+  const sortedComments = comments.sort(
+    (objA, objB) => Number(objB.createdAt) - Number(objA.createdAt)
+  );
 
   const handleSubmitReport = async (e) => {
     e.preventDefault();
     if (comment === '' || name === '') {
       setError(true);
       toast.error(`All fields required`, {
+        position: 'top-right',
+      });
+    } else if (comment.length > 500) {
+      toast.error(`Comment can not be more than 500 characters.`, {
         position: 'top-right',
       });
     } else {
@@ -35,7 +41,7 @@ export default function CommentPage() {
           comment,
           createdAt: new Date().getTime(),
         });
-        const data = await getDocs(commentCollectiion).orderBy('', 'desc');
+        const data = await getDocs(commentCollectiion);
         setComments(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         setComment('');
         setName('');
@@ -57,7 +63,7 @@ export default function CommentPage() {
     setLoadingComments(true);
     const getComments = async () => {
       try {
-        const data = await getDocs(commentCollectiion).orderBy('date', 'desc');
+        const data = await getDocs(commentCollectiion);
         setComments(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         setLoadingComments(false);
       } catch (err) {
@@ -95,7 +101,7 @@ export default function CommentPage() {
                 placeholder='Enter your comment'
                 rows='10'
               ></textarea>
-              <p>Maximmum of 250 characters.</p>
+              <p>Maximmum of 500 characters.</p>
               <button
                 disabled={loading}
                 className={
@@ -120,9 +126,15 @@ export default function CommentPage() {
                   Loading comments ...
                 </h3>
               </div>
+            ) : sortedComments?.length === 0 ? (
+              <div className='d-flex items-center justify-content-center'>
+                <h3 style={{ color: 'rgb(216, 88, 14)' }}>
+                  No comments found
+                </h3>
+              </div>
             ) : (
               <>
-                {comments.map((com) => (
+                {sortedComments.map((com) => (
                   <div key={com.id}>
                     <Comment clientComment={com} />
                   </div>
