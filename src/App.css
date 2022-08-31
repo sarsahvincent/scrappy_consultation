@@ -223,10 +223,9 @@ p {
   }
 
   .nav_link p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
-
-    font-weight: 700;
+    font-weight: 600;
   }
   .hero_container {
     height: 250px;
