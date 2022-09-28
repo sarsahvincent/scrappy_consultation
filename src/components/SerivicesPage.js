@@ -23,6 +23,7 @@ export default function SerivicesPage() {
               <li>Passport Registration.</li>
               <li>Birth Certificate Registration.</li>
               <li>Business Certificate Registration.</li>
+              <li>Drivers License.</li>
               <li>Tax Identification Number (TIN) Registration.</li>
             </ul>
           </div>
